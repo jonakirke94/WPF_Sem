@@ -1,0 +1,15 @@
+﻿<Page x:Class="WPF_SmartList.Pages.Units"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_SmartList.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="565" d:DesignWidth="800"
+      Title="Units">
+
+    <Grid>
+        <Label Content="Units" HorizontalAlignment="Left" Margin="360,222,0,0" VerticalAlignment="Top" Width="99"/>
+
+    </Grid>
+</Page>
