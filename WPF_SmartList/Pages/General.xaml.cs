@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_SmartList.ListService;
 
 namespace WPF_SmartList
 {
@@ -28,24 +29,22 @@ namespace WPF_SmartList
 
         private void SetGeneralStats()
         {
-            //string token = Application.Current.Resources["Token"].ToString();
-
+            string token = Application.Current.Resources["Token"].ToString();
+            var client = new ListServiceClient();
             try
-            {
-                //var client = new ListServiceClient();
+            {               
+                var stats = client.GetGeneralStats(token);
 
-
-
-                //lbl_totaluser.Content = client.GetTotalUsers(token);
-                //lbl_totalLists.Content = client.GetTotalLists(token);
-                //lbl_totalProducts.Content = client.GetTotalProducts(token);
+                lbl_totaluser.Content = stats.TotalUserCount;
+                lbl_totalLists.Content = stats.TotalListCount;
+                lbl_totalProducts.Content = stats.TotalItemCount;
             }
             catch (Exception)
             {
             }
             finally
             {
-                //client.Close();
+                client.Close();
             }
 
         }

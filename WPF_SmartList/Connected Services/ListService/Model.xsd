@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Category" nillable="true" type="tns:Category" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCategory" nillable="true" type="tns:ArrayOfCategory" />
+  <xs:complexType name="Category">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Default" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfItem" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="tns:User" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Category" nillable="true" type="tns:Category" />
+  <xs:complexType name="ArrayOfItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Item" nillable="true" type="tns:Item" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItem" nillable="true" type="tns:ArrayOfItem" />
+  <xs:complexType name="Item">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:double" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="tns:Category" />
+      <xs:element minOccurs="0" name="CategoryId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Changes" nillable="true" type="tns:ArrayOfItemChange" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Deadline" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Unit" nillable="true" type="tns:Unit" />
+      <xs:element minOccurs="0" name="UnitId" nillable="true" type="xs:int" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Item" nillable="true" type="tns:Item" />
+  <xs:complexType name="ArrayOfItemChange">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemChange" nillable="true" type="tns:ItemChange" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItemChange" nillable="true" type="tns:ArrayOfItemChange" />
+  <xs:complexType name="ItemChange">
+    <xs:sequence>
+      <xs:element name="_x003C_Action_x003E_k__BackingField" type="tns:Action" />
+      <xs:element name="_x003C_Date_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_Id_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_UserId_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_UserName_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemChange" nillable="true" type="tns:ItemChange" />
+  <xs:simpleType name="Action">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Create" />
+      <xs:enumeration value="Buy" />
+      <xs:enumeration value="Edit" />
+      <xs:enumeration value="Remove" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Action" nillable="true" type="tns:Action" />
+  <xs:complexType name="Unit">
+    <xs:sequence>
+      <xs:element name="_x003C_Id_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_Items_x003E_k__BackingField" nillable="true" type="tns:ArrayOfItem" />
+      <xs:element name="_x003C_Name_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Unit" nillable="true" type="tns:Unit" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address" nillable="true" type="tns:Address" />
+      <xs:element minOccurs="0" name="Categories" nillable="true" type="tns:ArrayOfCategory" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Invites" nillable="true" type="tns:ArrayOfInvite" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResetToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SharedLists" nillable="true" type="tns:ArrayOfUserList" />
+      <xs:element minOccurs="0" name="ShoppingLists" nillable="true" type="tns:ArrayOfShoppingList" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element name="_x003C_City_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Floor_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Id_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_Number_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Region_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Street_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_Zip_x003E_k__BackingField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address" />
+  <xs:complexType name="ArrayOfInvite">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Invite" nillable="true" type="tns:Invite" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInvite" nillable="true" type="tns:ArrayOfInvite" />
+  <xs:complexType name="Invite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accepted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="List" nillable="true" type="tns:ShoppingList" />
+      <xs:element minOccurs="0" name="ListId" type="xs:int" />
+      <xs:element minOccurs="0" name="OwnerId" type="xs:int" />
+      <xs:element minOccurs="0" name="ReceiverId" type="xs:int" />
+      <xs:element minOccurs="0" name="ReceiverMail" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Invite" nillable="true" type="tns:Invite" />
+  <xs:complexType name="ShoppingList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfItem" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="tns:User" />
+      <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Users" nillable="true" type="tns:ArrayOfUserList" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="ShoppingList" nillable="true" type="tns:ShoppingList" />
+  <xs:complexType name="ArrayOfUserList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserList" nillable="true" type="tns:UserList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserList" nillable="true" type="tns:ArrayOfUserList" />
+  <xs:complexType name="UserList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ShoppingList" nillable="true" type="tns:ShoppingList" />
+      <xs:element minOccurs="0" name="ShoppingListId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="tns:User" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:int" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="UserList" nillable="true" type="tns:UserList" />
+  <xs:complexType name="ArrayOfShoppingList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShoppingList" nillable="true" type="tns:ShoppingList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShoppingList" nillable="true" type="tns:ArrayOfShoppingList" />
+  <xs:complexType name="ArrayOfUnit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Unit" nillable="true" type="tns:Unit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUnit" nillable="true" type="tns:ArrayOfUnit" />
+  <xs:complexType name="GeneralStats">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TotalItemCount" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalListCount" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalUserCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeneralStats" nillable="true" type="tns:GeneralStats" />
+</xs:schema>

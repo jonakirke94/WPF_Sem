@@ -39,7 +39,7 @@ namespace WPF_SmartList
             {
                 //var client = new ListServiceClient();
 
-                //var data = client.GetMostUsedCategories();
+                //var data = client.GetSortedCategories();
                 //dg_categories.ItemsSource = data;
 
             }

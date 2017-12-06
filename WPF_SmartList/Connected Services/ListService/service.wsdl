@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ListService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IListService_AcceptInvite_InputMessage">
+    <wsdl:part name="parameters" element="tns:AcceptInvite" />
+  </wsdl:message>
+  <wsdl:message name="IListService_AcceptInvite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AcceptInviteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_AddCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCategory" />
+  </wsdl:message>
+  <wsdl:message name="IListService_AddCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_AddItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddItem" />
+  </wsdl:message>
+  <wsdl:message name="IListService_AddItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_AddShoppingList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddShoppingList" />
+  </wsdl:message>
+  <wsdl:message name="IListService_AddShoppingList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddShoppingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_EditItemName_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditItemName" />
+  </wsdl:message>
+  <wsdl:message name="IListService_EditItemName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditItemNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_EditItemCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditItemCategory" />
+  </wsdl:message>
+  <wsdl:message name="IListService_EditItemCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditItemCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_EditItemUnit_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditItemUnit" />
+  </wsdl:message>
+  <wsdl:message name="IListService_EditItemUnit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditItemUnitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_EditItemAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditItemAmount" />
+  </wsdl:message>
+  <wsdl:message name="IListService_EditItemAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditItemAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategories" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetDefaultCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultCategories" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetDefaultCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetDefaultUnits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultUnits" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetDefaultUnits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefaultUnitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetMostUsedCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMostUsedCategory" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetMostUsedCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMostUsedCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetMostUsedCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMostUsedCategories" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetMostUsedCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMostUsedCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetReceivedInvites_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReceivedInvites" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetReceivedInvites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReceivedInvitesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetSentInvites_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSentInvites" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetSentInvites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSentInvitesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetShoppingList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingList" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetShoppingList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetShoppingLists_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingLists" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetShoppingLists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShoppingListsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_RejectInvite_InputMessage">
+    <wsdl:part name="parameters" element="tns:RejectInvite" />
+  </wsdl:message>
+  <wsdl:message name="IListService_RejectInvite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RejectInviteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_RemoveCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCategory" />
+  </wsdl:message>
+  <wsdl:message name="IListService_RemoveCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_RemoveShoppingList_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveShoppingList" />
+  </wsdl:message>
+  <wsdl:message name="IListService_RemoveShoppingList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveShoppingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_RevokeInvite_InputMessage">
+    <wsdl:part name="parameters" element="tns:RevokeInvite" />
+  </wsdl:message>
+  <wsdl:message name="IListService_RevokeInvite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RevokeInviteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_SendInvite_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendInvite" />
+  </wsdl:message>
+  <wsdl:message name="IListService_SendInvite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendInviteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_AddDeadlineToItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDeadlineToItem" />
+  </wsdl:message>
+  <wsdl:message name="IListService_AddDeadlineToItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDeadlineToItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetUnits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnits" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetUnits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetMostUsedUnit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMostUsedUnit" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetMostUsedUnit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMostUsedUnitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_BuyItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuyItem" />
+  </wsdl:message>
+  <wsdl:message name="IListService_BuyItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuyItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_RemoveItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveItem" />
+  </wsdl:message>
+  <wsdl:message name="IListService_RemoveItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetMostRecentAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMostRecentAction" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetMostRecentAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMostRecentActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetGeneralStats_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeneralStats" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetGeneralStats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGeneralStatsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IListService">
+    <wsdl:operation name="AcceptInvite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/AcceptInvite" message="tns:IListService_AcceptInvite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/AcceptInviteResponse" message="tns:IListService_AcceptInvite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/AddCategory" message="tns:IListService_AddCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/AddCategoryResponse" message="tns:IListService_AddCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/AddItem" message="tns:IListService_AddItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/AddItemResponse" message="tns:IListService_AddItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddShoppingList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/AddShoppingList" message="tns:IListService_AddShoppingList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/AddShoppingListResponse" message="tns:IListService_AddShoppingList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditItemName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/EditItemName" message="tns:IListService_EditItemName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/EditItemNameResponse" message="tns:IListService_EditItemName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditItemCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/EditItemCategory" message="tns:IListService_EditItemCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/EditItemCategoryResponse" message="tns:IListService_EditItemCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditItemUnit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/EditItemUnit" message="tns:IListService_EditItemUnit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/EditItemUnitResponse" message="tns:IListService_EditItemUnit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditItemAmount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/EditItemAmount" message="tns:IListService_EditItemAmount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/EditItemAmountResponse" message="tns:IListService_EditItemAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/GetCategories" message="tns:IListService_GetCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/GetCategoriesResponse" message="tns:IListService_GetCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/GetDefaultCategories" message="tns:IListService_GetDefaultCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/GetDefaultCategoriesResponse" message="tns:IListService_GetDefaultCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultUnits">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/GetDefaultUnits" message="tns:IListService_GetDefaultUnits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/GetDefaultUnitsResponse" message="tns:IListService_GetDefaultUnits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMostUsedCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/GetMostUsedCategory" message="tns:IListService_GetMostUsedCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/GetMostUsedCategoryResponse" message="tns:IListService_GetMostUsedCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMostUsedCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/GetMostUsedCategories" message="tns:IListService_GetMostUsedCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/GetMostUsedCategoriesResponse" message="tns:IListService_GetMostUsedCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivedInvites">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/GetReceivedInvites" message="tns:IListService_GetReceivedInvites_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/GetReceivedInvitesResponse" message="tns:IListService_GetReceivedInvites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSentInvites">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/GetSentInvites" message="tns:IListService_GetSentInvites_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/GetSentInvitesResponse" message="tns:IListService_GetSentInvites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShoppingList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/GetShoppingList" message="tns:IListService_GetShoppingList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/GetShoppingListResponse" message="tns:IListService_GetShoppingList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShoppingLists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/GetShoppingLists" message="tns:IListService_GetShoppingLists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/GetShoppingListsResponse" message="tns:IListService_GetShoppingLists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RejectInvite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/RejectInvite" message="tns:IListService_RejectInvite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/RejectInviteResponse" message="tns:IListService_RejectInvite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/RemoveCategory" message="tns:IListService_RemoveCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/RemoveCategoryResponse" message="tns:IListService_RemoveCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveShoppingList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/RemoveShoppingList" message="tns:IListService_RemoveShoppingList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/RemoveShoppingListResponse" message="tns:IListService_RemoveShoppingList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RevokeInvite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/RevokeInvite" message="tns:IListService_RevokeInvite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/RevokeInviteResponse" message="tns:IListService_RevokeInvite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendInvite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/SendInvite" message="tns:IListService_SendInvite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/SendInviteResponse" message="tns:IListService_SendInvite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDeadlineToItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/AddDeadlineToItem" message="tns:IListService_AddDeadlineToItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/AddDeadlineToItemResponse" message="tns:IListService_AddDeadlineToItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnits">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/GetUnits" message="tns:IListService_GetUnits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/GetUnitsResponse" message="tns:IListService_GetUnits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMostUsedUnit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/GetMostUsedUnit" message="tns:IListService_GetMostUsedUnit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/GetMostUsedUnitResponse" message="tns:IListService_GetMostUsedUnit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuyItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/BuyItem" message="tns:IListService_BuyItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/BuyItemResponse" message="tns:IListService_BuyItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/RemoveItem" message="tns:IListService_RemoveItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/RemoveItemResponse" message="tns:IListService_RemoveItem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMostRecentAction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/GetMostRecentAction" message="tns:IListService_GetMostRecentAction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/GetMostRecentActionResponse" message="tns:IListService_GetMostRecentAction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralStats">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/GetGeneralStats" message="tns:IListService_GetGeneralStats_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/GetGeneralStatsResponse" message="tns:IListService_GetGeneralStats_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IListService" type="tns:IListService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AcceptInvite">
+      <soap:operation soapAction="http://tempuri.org/IListService/AcceptInvite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCategory">
+      <soap:operation soapAction="http://tempuri.org/IListService/AddCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddItem">
+      <soap:operation soapAction="http://tempuri.org/IListService/AddItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddShoppingList">
+      <soap:operation soapAction="http://tempuri.org/IListService/AddShoppingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditItemName">
+      <soap:operation soapAction="http://tempuri.org/IListService/EditItemName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditItemCategory">
+      <soap:operation soapAction="http://tempuri.org/IListService/EditItemCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditItemUnit">
+      <soap:operation soapAction="http://tempuri.org/IListService/EditItemUnit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditItemAmount">
+      <soap:operation soapAction="http://tempuri.org/IListService/EditItemAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap:operation soapAction="http://tempuri.org/IListService/GetCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultCategories">
+      <soap:operation soapAction="http://tempuri.org/IListService/GetDefaultCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefaultUnits">
+      <soap:operation soapAction="http://tempuri.org/IListService/GetDefaultUnits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMostUsedCategory">
+      <soap:operation soapAction="http://tempuri.org/IListService/GetMostUsedCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMostUsedCategories">
+      <soap:operation soapAction="http://tempuri.org/IListService/GetMostUsedCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceivedInvites">
+      <soap:operation soapAction="http://tempuri.org/IListService/GetReceivedInvites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSentInvites">
+      <soap:operation soapAction="http://tempuri.org/IListService/GetSentInvites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShoppingList">
+      <soap:operation soapAction="http://tempuri.org/IListService/GetShoppingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShoppingLists">
+      <soap:operation soapAction="http://tempuri.org/IListService/GetShoppingLists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RejectInvite">
+      <soap:operation soapAction="http://tempuri.org/IListService/RejectInvite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCategory">
+      <soap:operation soapAction="http://tempuri.org/IListService/RemoveCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveShoppingList">
+      <soap:operation soapAction="http://tempuri.org/IListService/RemoveShoppingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RevokeInvite">
+      <soap:operation soapAction="http://tempuri.org/IListService/RevokeInvite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendInvite">
+      <soap:operation soapAction="http://tempuri.org/IListService/SendInvite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDeadlineToItem">
+      <soap:operation soapAction="http://tempuri.org/IListService/AddDeadlineToItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnits">
+      <soap:operation soapAction="http://tempuri.org/IListService/GetUnits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMostUsedUnit">
+      <soap:operation soapAction="http://tempuri.org/IListService/GetMostUsedUnit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuyItem">
+      <soap:operation soapAction="http://tempuri.org/IListService/BuyItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveItem">
+      <soap:operation soapAction="http://tempuri.org/IListService/RemoveItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMostRecentAction">
+      <soap:operation soapAction="http://tempuri.org/IListService/GetMostRecentAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralStats">
+      <soap:operation soapAction="http://tempuri.org/IListService/GetGeneralStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ListService">
+    <wsdl:port name="BasicHttpBinding_IListService" binding="tns:BasicHttpBinding_IListService">
+      <soap:address location="http://localhost:9000/CoreServiceLibrary/ListService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
