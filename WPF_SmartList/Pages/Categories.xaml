@@ -9,12 +9,12 @@
       Title="Categories">
 
     <Grid>
-        <Label Content="Top used categories" HorizontalAlignment="Left" Margin="291,35,0,0" VerticalAlignment="Top" Height="68" Width="204" FontSize="22"/>
-        <DataGrid x:Name="dg_categories" HorizontalAlignment="Left" Height="380" Margin="149,108,0,0" VerticalAlignment="Top" Width="500" SelectionChanged="dg_categories_SelectionChanged">
+        <Label Content="Oversigt over brug af kategorier" HorizontalAlignment="Center" Margin="228,35,216,0" VerticalAlignment="Top" Height="68" Width="356" FontSize="22" FontWeight="Bold"/>
+        <DataGrid x:Name="dg_categories" HorizontalAlignment="Left" Height="auto" Margin="149,108,0,0" VerticalAlignment="Top" Width="auto" SelectionChanged="dg_categories_SelectionChanged" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="#" MinWidth="100" />
-                <DataGridTextColumn Header="Name" MinWidth="300" />
-                <DataGridTextColumn Header="Count" MinWidth="100" />
+                <DataGridTextColumn Binding="{Binding CatId}" Header="#" MinWidth="100" />
+                <DataGridTextColumn Binding="{Binding Name}" Header="Navn" MinWidth="300"/>
+                <DataGridTextColumn Binding="{Binding Count}" Header="Antal" MinWidth="100"/>
             </DataGrid.Columns>
         </DataGrid>
 

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+//using WPF_SmartList.ListService;
 
 namespace WPF_SmartList.Pages
 {
@@ -23,6 +24,38 @@ namespace WPF_SmartList.Pages
         public Units()
         {
             InitializeComponent();
+            //BindDataGrid();
         }
+
+        private void dg_units_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        //private void BindDataGrid()
+        //{
+        //    var client = new ListServiceClient();
+        //    try
+        //    {
+
+
+        //        var data = client.GetUnitData();
+
+        //        dg_units.ItemsSource = data;
+
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+        //    finally
+        //    {
+        //        client.Close();
+        //    }
+        //}
     }
+
+    
+
 }

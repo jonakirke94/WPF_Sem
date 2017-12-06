@@ -15,7 +15,7 @@
             <Button Content="General" MinWidth="150" Margin="10,0,0,0"  Click="general_clicked"></Button>
             <Button Content="Categories" MinWidth="150" Margin="10,0,0,0" Click="categories_clicked"></Button>
             <Button Content="Units" MinWidth="150" Margin="10,0,0,0" Click="units_clicked"></Button>
-            <Button Content="Items" MinWidth="150" Margin="10,0,0,0" Click="items_clicked"></Button>
+            <Button Content="Lists" MinWidth="150" Margin="10,0,0,0" Click="lists_clicked"></Button>
 
         </StackPanel>
         <Frame x:Name="MainFrame" Margin="0,35,0,0" NavigationUIVisibility="Hidden">

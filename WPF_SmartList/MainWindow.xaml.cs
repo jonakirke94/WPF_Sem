@@ -48,9 +48,9 @@ namespace WPF_SmartList
             MainFrame.Content = new Units();
         }
 
-        private void items_clicked(object sender, RoutedEventArgs e)
+        private void lists_clicked(object sender, RoutedEventArgs e)
         {
-            MainFrame.Content = new Items();
+            MainFrame.Content = new Lists();
         }
     }
 }

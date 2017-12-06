@@ -52,3 +52,5 @@ C:\Users\Jonathan\Documents\WPF_Sem\WPF_SmartList\obj\Debug\WPF_SmartList.csproj
 C:\Users\Jonathan\Documents\WPF_Sem\WPF_SmartList\obj\Debug\WPF_SmartList.csproj.CoreCompileInputs.cache
 C:\Users\Jonathan\Documents\WPF_Sem\WPF_SmartList\obj\Debug\WPF_SmartList.exe
 C:\Users\Jonathan\Documents\WPF_Sem\WPF_SmartList\obj\Debug\WPF_SmartList.pdb
+C:\Users\Jonathan\Documents\WPF_Sem\WPF_SmartList\obj\Debug\Pages\Lists.g.cs
+C:\Users\Jonathan\Documents\WPF_Sem\WPF_SmartList\obj\Debug\Pages\Lists.baml

@@ -1,0 +1,33 @@
+﻿<Page x:Class="WPF_SmartList.Pages.Lists"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_SmartList.Pages"
+      mc:Ignorable="d"
+      Title="Lists" Height="565" Width="800">
+
+    <Grid>
+        <Button Content="Filtrer" HorizontalAlignment="Left" Margin="497,157,0,0" VerticalAlignment="Top" Width="98" Height="33" Click="filter_clicked"/>
+        <Button Content="Vis alle" HorizontalAlignment="Left" Margin="600,157,0,0" VerticalAlignment="Top" Width="98" Height="33" Click="showAll_clicked"/>
+
+        <TextBox Text="Filtrer ud fra id"  HorizontalAlignment="Left" x:Name="txt_filter" Height="34" Margin="332,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" FontSize="22"/>
+
+        <DataGrid x:Name="dg_list" HorizontalAlignment="Left" Height="339" Margin="184,226,0,0" VerticalAlignment="Top" Width="auto" SelectionChanged="dg_lists_SelectionChanged" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ListId}" Header="#" MinWidth="100" />
+                <DataGridTextColumn Binding="{Binding Name}" Header="Navn" MinWidth="300"/>
+                <DataGridTextColumn Binding="{Binding ItemCount}" Header="# Varer" MinWidth="100"/>
+                <DataGridTemplateColumn MinWidth="100" Header="Handling">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="GoToList_clicked">Vis detaljer</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Oversigt over alle lister&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" Margin="332,82,0,0" VerticalAlignment="Top" Height="69" Width="417" FontSize="22"/>
+
+    </Grid>
+</Page>

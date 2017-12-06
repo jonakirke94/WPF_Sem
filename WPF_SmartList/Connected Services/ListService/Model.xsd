@@ -168,17 +168,4 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfUnit" nillable="true" type="tns:ArrayOfUnit" />
-  <xs:complexType name="GeneralStats">
-    <xs:annotation>
-      <xs:appinfo>
-        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
-      </xs:appinfo>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element minOccurs="0" name="TotalItemCount" type="xs:int" />
-      <xs:element minOccurs="0" name="TotalListCount" type="xs:int" />
-      <xs:element minOccurs="0" name="TotalUserCount" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="GeneralStats" nillable="true" type="tns:GeneralStats" />
 </xs:schema>

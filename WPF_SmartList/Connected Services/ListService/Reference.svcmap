@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fa425f6d-ff40-4dee-bd81-5710e37f738b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cf7b24e2-1b8c-4ecc-9cc9-377c1262b54f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -9,7 +9,9 @@
     <GenerateInternalTypes>false</GenerateInternalTypes>
     <GenerateMessageContracts>false</GenerateMessageContracts>
     <NamespaceMappings />
-    <CollectionMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
     <GenerateSerializableTypes>true</GenerateSerializableTypes>
     <Serializer>Auto</Serializer>
     <UseSerializerForFaults>true</UseSerializerForFaults>
@@ -22,10 +24,11 @@
     <MetadataSource Address="http://localhost:9000/CoreServiceLibrary/ListService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="5a4b6faa-693a-45b0-8eb0-2d72ede71aaf" SourceId="1" SourceUrl="http://localhost:9000/CoreServiceLibrary/ListService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="62c6fba0-dc21-4195-ab9b-425ec690c556" SourceId="1" SourceUrl="http://localhost:9000/CoreServiceLibrary/ListService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="1a7697d1-0fd5-411a-a7f3-4c1cd40fb6f4" SourceId="1" SourceUrl="http://localhost:9000/CoreServiceLibrary/ListService/mex" />
-    <MetadataFile FileName="Model.xsd" MetadataType="Schema" ID="a396a445-e830-4495-91fd-1f2d378282b6" SourceId="1" SourceUrl="http://localhost:9000/CoreServiceLibrary/ListService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="fa829112-f189-4521-90cc-ff08ee09f67e" SourceId="1" SourceUrl="http://localhost:9000/CoreServiceLibrary/ListService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="00569a71-9f3e-4790-95cd-49996b5cabd9" SourceId="1" SourceUrl="http://localhost:9000/CoreServiceLibrary/ListService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="7e7c8fdd-1b6b-4b1d-8704-7d1a35f610fc" SourceId="1" SourceUrl="http://localhost:9000/CoreServiceLibrary/ListService/mex" />
+    <MetadataFile FileName="Model.xsd" MetadataType="Schema" ID="622b6dc4-d5d1-44d1-bdc4-c934bbccf83c" SourceId="1" SourceUrl="http://localhost:9000/CoreServiceLibrary/ListService/mex" />
+    <MetadataFile FileName="Controller.xsd" MetadataType="Schema" ID="a65b806e-36c6-42c9-838d-16c22e1d9a3d" SourceId="1" SourceUrl="http://localhost:9000/CoreServiceLibrary/ListService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

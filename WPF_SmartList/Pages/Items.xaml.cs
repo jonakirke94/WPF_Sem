@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+//using WPF_SmartList.ListService;
 
 namespace WPF_SmartList.Pages
 {
@@ -33,6 +34,19 @@ namespace WPF_SmartList.Pages
             NavigationService.Navigate(new Uri(@"Pages/ItemDetails.xaml", System.UriKind.RelativeOrAbsolute), id);
         }
 
-       
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            //var client = new ListServiceClient();
+            ////var textinput = Txt_search.
+            //try
+            //{
+
+            //}
+            //catch (Exception)
+            //{
+
+            //    throw;
+            //}
+        }
     }
 }

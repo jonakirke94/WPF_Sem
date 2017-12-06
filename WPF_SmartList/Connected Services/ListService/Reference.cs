@@ -29,7 +29,7 @@ namespace WPF_SmartList.ListService {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WPF_SmartList.ListService.Item[] ItemsField;
+        private System.Collections.Generic.List<WPF_SmartList.ListService.Item> ItemsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
@@ -77,7 +77,7 @@ namespace WPF_SmartList.ListService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WPF_SmartList.ListService.Item[] Items {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.Item> Items {
             get {
                 return this.ItemsField;
             }
@@ -154,7 +154,7 @@ namespace WPF_SmartList.ListService {
         private WPF_SmartList.ListService.Address AddressField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WPF_SmartList.ListService.Category[] CategoriesField;
+        private System.Collections.Generic.List<WPF_SmartList.ListService.Category> CategoriesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EmailField;
@@ -163,7 +163,7 @@ namespace WPF_SmartList.ListService {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WPF_SmartList.ListService.Invite[] InvitesField;
+        private System.Collections.Generic.List<WPF_SmartList.ListService.Invite> InvitesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PasswordField;
@@ -172,10 +172,10 @@ namespace WPF_SmartList.ListService {
         private string ResetTokenField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WPF_SmartList.ListService.UserList[] SharedListsField;
+        private System.Collections.Generic.List<WPF_SmartList.ListService.UserList> SharedListsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WPF_SmartList.ListService.ShoppingList[] ShoppingListsField;
+        private System.Collections.Generic.List<WPF_SmartList.ListService.ShoppingList> ShoppingListsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string UsernameField;
@@ -217,7 +217,7 @@ namespace WPF_SmartList.ListService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WPF_SmartList.ListService.Category[] Categories {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.Category> Categories {
             get {
                 return this.CategoriesField;
             }
@@ -256,7 +256,7 @@ namespace WPF_SmartList.ListService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WPF_SmartList.ListService.Invite[] Invites {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.Invite> Invites {
             get {
                 return this.InvitesField;
             }
@@ -295,7 +295,7 @@ namespace WPF_SmartList.ListService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WPF_SmartList.ListService.UserList[] SharedLists {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.UserList> SharedLists {
             get {
                 return this.SharedListsField;
             }
@@ -308,7 +308,7 @@ namespace WPF_SmartList.ListService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WPF_SmartList.ListService.ShoppingList[] ShoppingLists {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.ShoppingList> ShoppingLists {
             get {
                 return this.ShoppingListsField;
             }
@@ -362,7 +362,7 @@ namespace WPF_SmartList.ListService {
         private System.Nullable<int> CategoryIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WPF_SmartList.ListService.ItemChange[] ChangesField;
+        private System.Collections.Generic.List<WPF_SmartList.ListService.ItemChange> ChangesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int CountField;
@@ -432,7 +432,7 @@ namespace WPF_SmartList.ListService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WPF_SmartList.ListService.ItemChange[] Changes {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.ItemChange> Changes {
             get {
                 return this.ChangesField;
             }
@@ -543,7 +543,7 @@ namespace WPF_SmartList.ListService {
         
         private int Idk__BackingFieldField;
         
-        private WPF_SmartList.ListService.Item[] Itemsk__BackingFieldField;
+        private System.Collections.Generic.List<WPF_SmartList.ListService.Item> Itemsk__BackingFieldField;
         
         private string Namek__BackingFieldField;
         
@@ -571,7 +571,7 @@ namespace WPF_SmartList.ListService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Name="<Items>k__BackingField", IsRequired=true)]
-        public WPF_SmartList.ListService.Item[] Itemsk__BackingField {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.Item> Itemsk__BackingField {
             get {
                 return this.Itemsk__BackingFieldField;
             }
@@ -1108,7 +1108,7 @@ namespace WPF_SmartList.ListService {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WPF_SmartList.ListService.Item[] ItemsField;
+        private System.Collections.Generic.List<WPF_SmartList.ListService.Item> ItemsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
@@ -1120,7 +1120,7 @@ namespace WPF_SmartList.ListService {
         private System.Nullable<int> OwnerIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private WPF_SmartList.ListService.UserList[] UsersField;
+        private System.Collections.Generic.List<WPF_SmartList.ListService.UserList> UsersField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1146,7 +1146,7 @@ namespace WPF_SmartList.ListService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WPF_SmartList.ListService.Item[] Items {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.Item> Items {
             get {
                 return this.ItemsField;
             }
@@ -1198,7 +1198,7 @@ namespace WPF_SmartList.ListService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public WPF_SmartList.ListService.UserList[] Users {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.UserList> Users {
             get {
                 return this.UsersField;
             }
@@ -1222,9 +1222,85 @@ namespace WPF_SmartList.ListService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GeneralStats", Namespace="http://schemas.datacontract.org/2004/07/Model")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StatsController.LightCategoryData", Namespace="http://schemas.datacontract.org/2004/07/Controller")]
     [System.SerializableAttribute()]
-    public partial struct GeneralStats : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial struct StatsControllerLightCategoryData : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CatIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CatId {
+            get {
+                return this.CatIdField;
+            }
+            set {
+                if ((this.CatIdField.Equals(value) != true)) {
+                    this.CatIdField = value;
+                    this.RaisePropertyChanged("CatId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Count {
+            get {
+                return this.CountField;
+            }
+            set {
+                if ((this.CountField.Equals(value) != true)) {
+                    this.CountField = value;
+                    this.RaisePropertyChanged("Count");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StatsController.GeneralStats", Namespace="http://schemas.datacontract.org/2004/07/Controller")]
+    [System.SerializableAttribute()]
+    public partial struct StatsControllerGeneralStats : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -1296,6 +1372,82 @@ namespace WPF_SmartList.ListService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StatsController.LightListData", Namespace="http://schemas.datacontract.org/2004/07/Controller")]
+    [System.SerializableAttribute()]
+    public partial struct StatsControllerLightListData : System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ItemCountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ListIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ItemCount {
+            get {
+                return this.ItemCountField;
+            }
+            set {
+                if ((this.ItemCountField.Equals(value) != true)) {
+                    this.ItemCountField = value;
+                    this.RaisePropertyChanged("ItemCount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ListId {
+            get {
+                return this.ListIdField;
+            }
+            set {
+                if ((this.ListIdField.Equals(value) != true)) {
+                    this.ListIdField = value;
+                    this.RaisePropertyChanged("ListId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ListService.IListService")]
     public interface IListService {
@@ -1349,22 +1501,22 @@ namespace WPF_SmartList.ListService {
         System.Threading.Tasks.Task<bool> EditItemAmountAsync(string token, int itemId, int listId, double newAmount);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetCategories", ReplyAction="http://tempuri.org/IListService/GetCategoriesResponse")]
-        WPF_SmartList.ListService.Category[] GetCategories(string token);
+        System.Collections.Generic.List<WPF_SmartList.ListService.Category> GetCategories(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetCategories", ReplyAction="http://tempuri.org/IListService/GetCategoriesResponse")]
-        System.Threading.Tasks.Task<WPF_SmartList.ListService.Category[]> GetCategoriesAsync(string token);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.Category>> GetCategoriesAsync(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetDefaultCategories", ReplyAction="http://tempuri.org/IListService/GetDefaultCategoriesResponse")]
-        WPF_SmartList.ListService.Category[] GetDefaultCategories();
+        System.Collections.Generic.List<WPF_SmartList.ListService.Category> GetDefaultCategories();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetDefaultCategories", ReplyAction="http://tempuri.org/IListService/GetDefaultCategoriesResponse")]
-        System.Threading.Tasks.Task<WPF_SmartList.ListService.Category[]> GetDefaultCategoriesAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.Category>> GetDefaultCategoriesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetDefaultUnits", ReplyAction="http://tempuri.org/IListService/GetDefaultUnitsResponse")]
-        WPF_SmartList.ListService.Unit[] GetDefaultUnits();
+        System.Collections.Generic.List<WPF_SmartList.ListService.Unit> GetDefaultUnits();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetDefaultUnits", ReplyAction="http://tempuri.org/IListService/GetDefaultUnitsResponse")]
-        System.Threading.Tasks.Task<WPF_SmartList.ListService.Unit[]> GetDefaultUnitsAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.Unit>> GetDefaultUnitsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetMostUsedCategory", ReplyAction="http://tempuri.org/IListService/GetMostUsedCategoryResponse")]
         WPF_SmartList.ListService.Category GetMostUsedCategory(string token, string itemName);
@@ -1373,22 +1525,22 @@ namespace WPF_SmartList.ListService {
         System.Threading.Tasks.Task<WPF_SmartList.ListService.Category> GetMostUsedCategoryAsync(string token, string itemName);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetMostUsedCategories", ReplyAction="http://tempuri.org/IListService/GetMostUsedCategoriesResponse")]
-        WPF_SmartList.ListService.Category[] GetMostUsedCategories();
+        System.Collections.Generic.List<WPF_SmartList.ListService.StatsControllerLightCategoryData> GetMostUsedCategories();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetMostUsedCategories", ReplyAction="http://tempuri.org/IListService/GetMostUsedCategoriesResponse")]
-        System.Threading.Tasks.Task<WPF_SmartList.ListService.Category[]> GetMostUsedCategoriesAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.StatsControllerLightCategoryData>> GetMostUsedCategoriesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetReceivedInvites", ReplyAction="http://tempuri.org/IListService/GetReceivedInvitesResponse")]
-        WPF_SmartList.ListService.Invite[] GetReceivedInvites(string token);
+        System.Collections.Generic.List<WPF_SmartList.ListService.Invite> GetReceivedInvites(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetReceivedInvites", ReplyAction="http://tempuri.org/IListService/GetReceivedInvitesResponse")]
-        System.Threading.Tasks.Task<WPF_SmartList.ListService.Invite[]> GetReceivedInvitesAsync(string token);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.Invite>> GetReceivedInvitesAsync(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetSentInvites", ReplyAction="http://tempuri.org/IListService/GetSentInvitesResponse")]
-        WPF_SmartList.ListService.Invite[] GetSentInvites(string token, int listId);
+        System.Collections.Generic.List<WPF_SmartList.ListService.Invite> GetSentInvites(string token, int listId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetSentInvites", ReplyAction="http://tempuri.org/IListService/GetSentInvitesResponse")]
-        System.Threading.Tasks.Task<WPF_SmartList.ListService.Invite[]> GetSentInvitesAsync(string token, int listId);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.Invite>> GetSentInvitesAsync(string token, int listId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetShoppingList", ReplyAction="http://tempuri.org/IListService/GetShoppingListResponse")]
         WPF_SmartList.ListService.ShoppingList GetShoppingList(string token, int id);
@@ -1397,10 +1549,10 @@ namespace WPF_SmartList.ListService {
         System.Threading.Tasks.Task<WPF_SmartList.ListService.ShoppingList> GetShoppingListAsync(string token, int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetShoppingLists", ReplyAction="http://tempuri.org/IListService/GetShoppingListsResponse")]
-        WPF_SmartList.ListService.ShoppingList[] GetShoppingLists(string token);
+        System.Collections.Generic.List<WPF_SmartList.ListService.ShoppingList> GetShoppingLists(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetShoppingLists", ReplyAction="http://tempuri.org/IListService/GetShoppingListsResponse")]
-        System.Threading.Tasks.Task<WPF_SmartList.ListService.ShoppingList[]> GetShoppingListsAsync(string token);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.ShoppingList>> GetShoppingListsAsync(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/RejectInvite", ReplyAction="http://tempuri.org/IListService/RejectInviteResponse")]
         bool RejectInvite(string token, int id);
@@ -1439,10 +1591,10 @@ namespace WPF_SmartList.ListService {
         System.Threading.Tasks.Task<bool> AddDeadlineToItemAsync(string userToken, int itemId, System.DateTime deadline, int listId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetUnits", ReplyAction="http://tempuri.org/IListService/GetUnitsResponse")]
-        WPF_SmartList.ListService.Unit[] GetUnits();
+        System.Collections.Generic.List<WPF_SmartList.ListService.Unit> GetUnits();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetUnits", ReplyAction="http://tempuri.org/IListService/GetUnitsResponse")]
-        System.Threading.Tasks.Task<WPF_SmartList.ListService.Unit[]> GetUnitsAsync();
+        System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.Unit>> GetUnitsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetMostUsedUnit", ReplyAction="http://tempuri.org/IListService/GetMostUsedUnitResponse")]
         WPF_SmartList.ListService.Unit GetMostUsedUnit(string itemName);
@@ -1469,10 +1621,16 @@ namespace WPF_SmartList.ListService {
         System.Threading.Tasks.Task<WPF_SmartList.ListService.ItemChange> GetMostRecentActionAsync(int itemId, string accessToken);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetGeneralStats", ReplyAction="http://tempuri.org/IListService/GetGeneralStatsResponse")]
-        WPF_SmartList.ListService.GeneralStats GetGeneralStats(string token);
+        WPF_SmartList.ListService.StatsControllerGeneralStats GetGeneralStats(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetGeneralStats", ReplyAction="http://tempuri.org/IListService/GetGeneralStatsResponse")]
-        System.Threading.Tasks.Task<WPF_SmartList.ListService.GeneralStats> GetGeneralStatsAsync(string token);
+        System.Threading.Tasks.Task<WPF_SmartList.ListService.StatsControllerGeneralStats> GetGeneralStatsAsync(string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetLists", ReplyAction="http://tempuri.org/IListService/GetListsResponse")]
+        System.Collections.Generic.List<WPF_SmartList.ListService.StatsControllerLightListData> GetLists();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IListService/GetLists", ReplyAction="http://tempuri.org/IListService/GetListsResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.StatsControllerLightListData>> GetListsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1566,27 +1724,27 @@ namespace WPF_SmartList.ListService {
             return base.Channel.EditItemAmountAsync(token, itemId, listId, newAmount);
         }
         
-        public WPF_SmartList.ListService.Category[] GetCategories(string token) {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.Category> GetCategories(string token) {
             return base.Channel.GetCategories(token);
         }
         
-        public System.Threading.Tasks.Task<WPF_SmartList.ListService.Category[]> GetCategoriesAsync(string token) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.Category>> GetCategoriesAsync(string token) {
             return base.Channel.GetCategoriesAsync(token);
         }
         
-        public WPF_SmartList.ListService.Category[] GetDefaultCategories() {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.Category> GetDefaultCategories() {
             return base.Channel.GetDefaultCategories();
         }
         
-        public System.Threading.Tasks.Task<WPF_SmartList.ListService.Category[]> GetDefaultCategoriesAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.Category>> GetDefaultCategoriesAsync() {
             return base.Channel.GetDefaultCategoriesAsync();
         }
         
-        public WPF_SmartList.ListService.Unit[] GetDefaultUnits() {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.Unit> GetDefaultUnits() {
             return base.Channel.GetDefaultUnits();
         }
         
-        public System.Threading.Tasks.Task<WPF_SmartList.ListService.Unit[]> GetDefaultUnitsAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.Unit>> GetDefaultUnitsAsync() {
             return base.Channel.GetDefaultUnitsAsync();
         }
         
@@ -1598,27 +1756,27 @@ namespace WPF_SmartList.ListService {
             return base.Channel.GetMostUsedCategoryAsync(token, itemName);
         }
         
-        public WPF_SmartList.ListService.Category[] GetMostUsedCategories() {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.StatsControllerLightCategoryData> GetMostUsedCategories() {
             return base.Channel.GetMostUsedCategories();
         }
         
-        public System.Threading.Tasks.Task<WPF_SmartList.ListService.Category[]> GetMostUsedCategoriesAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.StatsControllerLightCategoryData>> GetMostUsedCategoriesAsync() {
             return base.Channel.GetMostUsedCategoriesAsync();
         }
         
-        public WPF_SmartList.ListService.Invite[] GetReceivedInvites(string token) {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.Invite> GetReceivedInvites(string token) {
             return base.Channel.GetReceivedInvites(token);
         }
         
-        public System.Threading.Tasks.Task<WPF_SmartList.ListService.Invite[]> GetReceivedInvitesAsync(string token) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.Invite>> GetReceivedInvitesAsync(string token) {
             return base.Channel.GetReceivedInvitesAsync(token);
         }
         
-        public WPF_SmartList.ListService.Invite[] GetSentInvites(string token, int listId) {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.Invite> GetSentInvites(string token, int listId) {
             return base.Channel.GetSentInvites(token, listId);
         }
         
-        public System.Threading.Tasks.Task<WPF_SmartList.ListService.Invite[]> GetSentInvitesAsync(string token, int listId) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.Invite>> GetSentInvitesAsync(string token, int listId) {
             return base.Channel.GetSentInvitesAsync(token, listId);
         }
         
@@ -1630,11 +1788,11 @@ namespace WPF_SmartList.ListService {
             return base.Channel.GetShoppingListAsync(token, id);
         }
         
-        public WPF_SmartList.ListService.ShoppingList[] GetShoppingLists(string token) {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.ShoppingList> GetShoppingLists(string token) {
             return base.Channel.GetShoppingLists(token);
         }
         
-        public System.Threading.Tasks.Task<WPF_SmartList.ListService.ShoppingList[]> GetShoppingListsAsync(string token) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.ShoppingList>> GetShoppingListsAsync(string token) {
             return base.Channel.GetShoppingListsAsync(token);
         }
         
@@ -1686,11 +1844,11 @@ namespace WPF_SmartList.ListService {
             return base.Channel.AddDeadlineToItemAsync(userToken, itemId, deadline, listId);
         }
         
-        public WPF_SmartList.ListService.Unit[] GetUnits() {
+        public System.Collections.Generic.List<WPF_SmartList.ListService.Unit> GetUnits() {
             return base.Channel.GetUnits();
         }
         
-        public System.Threading.Tasks.Task<WPF_SmartList.ListService.Unit[]> GetUnitsAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.Unit>> GetUnitsAsync() {
             return base.Channel.GetUnitsAsync();
         }
         
@@ -1726,12 +1884,20 @@ namespace WPF_SmartList.ListService {
             return base.Channel.GetMostRecentActionAsync(itemId, accessToken);
         }
         
-        public WPF_SmartList.ListService.GeneralStats GetGeneralStats(string token) {
+        public WPF_SmartList.ListService.StatsControllerGeneralStats GetGeneralStats(string token) {
             return base.Channel.GetGeneralStats(token);
         }
         
-        public System.Threading.Tasks.Task<WPF_SmartList.ListService.GeneralStats> GetGeneralStatsAsync(string token) {
+        public System.Threading.Tasks.Task<WPF_SmartList.ListService.StatsControllerGeneralStats> GetGeneralStatsAsync(string token) {
             return base.Channel.GetGeneralStatsAsync(token);
+        }
+        
+        public System.Collections.Generic.List<WPF_SmartList.ListService.StatsControllerLightListData> GetLists() {
+            return base.Channel.GetLists();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<WPF_SmartList.ListService.StatsControllerLightListData>> GetListsAsync() {
+            return base.Channel.GetListsAsync();
         }
     }
 }

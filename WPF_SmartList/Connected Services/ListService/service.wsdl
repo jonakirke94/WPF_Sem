@@ -5,6 +5,7 @@
       <xsd:import namespace="http://tempuri.org/" />
       <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/Model" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Controller" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IListService_AcceptInvite_InputMessage">
@@ -181,6 +182,12 @@
   <wsdl:message name="IListService_GetGeneralStats_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetGeneralStatsResponse" />
   </wsdl:message>
+  <wsdl:message name="IListService_GetLists_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLists" />
+  </wsdl:message>
+  <wsdl:message name="IListService_GetLists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListsResponse" />
+  </wsdl:message>
   <wsdl:portType name="IListService">
     <wsdl:operation name="AcceptInvite">
       <wsdl:input wsaw:Action="http://tempuri.org/IListService/AcceptInvite" message="tns:IListService_AcceptInvite_InputMessage" />
@@ -297,6 +304,10 @@
     <wsdl:operation name="GetGeneralStats">
       <wsdl:input wsaw:Action="http://tempuri.org/IListService/GetGeneralStats" message="tns:IListService_GetGeneralStats_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IListService/GetGeneralStatsResponse" message="tns:IListService_GetGeneralStats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IListService/GetLists" message="tns:IListService_GetLists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IListService/GetListsResponse" message="tns:IListService_GetLists_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IListService" type="tns:IListService">
@@ -555,6 +566,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetGeneralStats">
       <soap:operation soapAction="http://tempuri.org/IListService/GetGeneralStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLists">
+      <soap:operation soapAction="http://tempuri.org/IListService/GetLists" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

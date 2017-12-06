@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Controller" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Controller" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfStatsController.LightCategoryData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatsController.LightCategoryData" type="tns:StatsController.LightCategoryData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatsController.LightCategoryData" nillable="true" type="tns:ArrayOfStatsController.LightCategoryData" />
+  <xs:complexType name="StatsController.LightCategoryData">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CatId" type="xs:int" />
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatsController.LightCategoryData" nillable="true" type="tns:StatsController.LightCategoryData" />
+  <xs:complexType name="StatsController.GeneralStats">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TotalItemCount" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalListCount" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalUserCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatsController.GeneralStats" nillable="true" type="tns:StatsController.GeneralStats" />
+  <xs:complexType name="ArrayOfStatsController.LightListData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatsController.LightListData" type="tns:StatsController.LightListData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatsController.LightListData" nillable="true" type="tns:ArrayOfStatsController.LightListData" />
+  <xs:complexType name="StatsController.LightListData">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemCount" type="xs:int" />
+      <xs:element minOccurs="0" name="ListId" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatsController.LightListData" nillable="true" type="tns:StatsController.LightListData" />
+</xs:schema>

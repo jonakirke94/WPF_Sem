@@ -9,8 +9,10 @@
       Title="Items">
 
     <Grid>
-        <Label Content="Items" HorizontalAlignment="Left" Margin="441,206,0,0" VerticalAlignment="Top" Width="126"/>
-        <Button Content="Details" HorizontalAlignment="Left" Margin="298,303,0,0" VerticalAlignment="Top" Width="162" Height="37" Click="details_clicked"/>
+        <Button Content="Details" HorizontalAlignment="Left" Margin="312,362,0,0" VerticalAlignment="Top" Width="162" Height="36" Click="details_clicked"/>
+        <Label Content="Søg vare:" HorizontalAlignment="Left" Margin="198,140,0,0" VerticalAlignment="Top" Height="23" Width="119"/>
+        <TextBox x:Name="Txt_search" HorizontalAlignment="Left" Height="23" Margin="322,140,0,0" TextWrapping="Wrap" Text="Skriv navn på vare her" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Søg&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="86" Margin="468,143,0,0" Click="Search_Click" Height="20"/>
 
     </Grid>
 </Page>

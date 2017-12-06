@@ -9,7 +9,16 @@
       Title="Units">
 
     <Grid>
-        <Label Content="Units" HorizontalAlignment="Left" Margin="360,222,0,0" VerticalAlignment="Top" Width="99"/>
+        <Label Content="Oversigt over brug af enheder" HorizontalAlignment="Center" Margin="242,35,214,0" VerticalAlignment="Top" Height="68" Width="auto" FontSize="22" FontWeight="Bold"/>
+        <DataGrid x:Name="dg_units" HorizontalAlignment="Left" Height="auto" Margin="149,108,0,0" VerticalAlignment="Top" Width="auto" SelectionChanged="dg_units_SelectionChanged" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding UnitId}" Header="#" MinWidth="100" />
+                <DataGridTextColumn Binding="{Binding Name}" Header="Navn" MinWidth="300"/>
+                <DataGridTextColumn Binding="{Binding Count}" Header="Antal" MinWidth="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
 
     </Grid>
 </Page>

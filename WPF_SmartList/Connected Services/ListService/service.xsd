@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import namespace="http://schemas.datacontract.org/2004/07/Model" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Controller" />
   <xs:element name="AcceptInvite">
     <xs:complexType>
       <xs:sequence>
@@ -195,7 +196,7 @@
   <xs:element name="GetMostUsedCategoriesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetMostUsedCategoriesResult" nillable="true" type="q5:ArrayOfCategory" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Controller" minOccurs="0" name="GetMostUsedCategoriesResult" nillable="true" type="q5:ArrayOfStatsController.LightCategoryData" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -433,7 +434,19 @@
   <xs:element name="GetGeneralStatsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Model" minOccurs="0" name="GetGeneralStatsResult" type="q13:GeneralStats" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Controller" minOccurs="0" name="GetGeneralStatsResult" type="q13:StatsController.GeneralStats" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLists">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Controller" minOccurs="0" name="GetListsResult" nillable="true" type="q14:ArrayOfStatsController.LightListData" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

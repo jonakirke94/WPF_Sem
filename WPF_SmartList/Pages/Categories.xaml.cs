@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+//using WPF_SmartList.ListService;
 
 namespace WPF_SmartList
 {
@@ -23,7 +24,7 @@ namespace WPF_SmartList
         public Categories()
         {
             InitializeComponent();
-            BindDataGrid();
+            //BindDataGrid();
         }
 
         private void dg_categories_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -31,27 +32,28 @@ namespace WPF_SmartList
 
         }
 
-        private void BindDataGrid()
-        {
-            //string token = Application.Current.Resources["Token"].ToString();
+        //private void BindDataGrid()
+        //{
+        //   // string token = Application.Current.Resources["Token"].ToString();
+        //    var client = new ListServiceClient();
+        //    try
+        //    {
 
-            try
-            {
-                //var client = new ListServiceClient();
 
-                //var data = client.GetSortedCategories();
-                //dg_categories.ItemsSource = data;
+        //        var data = client.GetMostUsedCategories();
 
-            }
-            catch (Exception)
-            {
+        //        dg_categories.ItemsSource = data;
 
-                throw;
-            }
-            finally
-            {
-                //client.Close
-            }
-        }
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        throw;
+        //    }
+        //    finally
+        //    {
+        //        client.Close();
+        //    }
+        //}
     }
 }
